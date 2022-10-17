@@ -29,7 +29,7 @@ namespace CatalogBook.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            // Для миграции закоментировать
             optionsBuilder.UseSqlServer(_connectStr);
 
             // Для миграции раскоментировать
