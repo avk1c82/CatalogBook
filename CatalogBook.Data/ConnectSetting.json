@@ -1,0 +1,5 @@
+{
+	"ConnectionStrings": {
+		"DefaultConnection": "Server=SQL-PC\\SQLAVK;Database=BookDB;User=sa;Password=sa198210"
+	}
+}

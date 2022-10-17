@@ -1,0 +1,31 @@
+﻿<Window x:Class="CatalogBook.Wpf.Windows.AuthorEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatalogBook.Wpf.Windows"
+        xmlns:vm="clr-namespace:CatalogBook.Wpf.ViewModels"
+        mc:Ignorable="d"
+        Title="Автор" Height="150" Width="400">
+
+    <Window.DataContext>
+        <vm:vm_AuthorEdit/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Наименование:" ></Label>
+            <TextBox x:Name="tbName" Text="{Binding AuthorName}" Width="250"/>
+        </WrapPanel>
+
+        <WrapPanel Margin="5" Grid.Row="2" HorizontalAlignment="Right">
+            <Button x:Name="btnOK" Content="OK" Click="btnOK_Click" Width="100" Margin="5"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="100" Margin="5" IsCancel="True"/>
+        </WrapPanel>
+    </Grid>
+</Window>
